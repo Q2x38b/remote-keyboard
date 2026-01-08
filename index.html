@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,503 +11,430 @@
             box-sizing: border-box;
         }
 
-```
-    body {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 40px 20px;
-        color: #fff;
-    }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            color: #fff;
+        }
 
-    h1 {
-        margin-bottom: 10px;
-        font-weight: 300;
-        letter-spacing: 2px;
-    }
+        h1 {
+            margin-bottom: 10px;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
 
-    .subtitle {
-        color: #8892b0;
-        margin-bottom: 30px;
-        font-size: 14px;
-    }
+        .subtitle {
+            color: #8892b0;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
 
-    .connection-panel {
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 12px;
-        padding: 24px;
-        width: 100%;
-        max-width: 600px;
-        margin-bottom: 24px;
-    }
+        .connection-panel {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 24px;
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 24px;
+        }
 
-    .connection-panel h2 {
-        font-size: 16px;
-        font-weight: 500;
-        margin-bottom: 16px;
-        color: #64ffda;
-    }
+        .connection-panel h2 {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 16px;
+            color: #64ffda;
+        }
 
-    .status {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        margin-bottom: 20px;
-    }
+        .status {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
 
-    .status-dot {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background: #ff6b6b;
-        transition: background 0.3s;
-    }
+        .status-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #ff6b6b;
+            transition: background 0.3s;
+        }
 
-    .status-dot.connected {
-        background: #64ffda;
-        box-shadow: 0 0 10px #64ffda;
-    }
+        .status-dot.connected {
+            background: #64ffda;
+            box-shadow: 0 0 10px #64ffda;
+        }
 
-    .status-text {
-        font-size: 14px;
-        color: #8892b0;
-    }
+        .status-text {
+            font-size: 14px;
+            color: #8892b0;
+        }
 
-    .input-group {
-        display: flex;
-        gap: 10px;
-        margin-bottom: 12px;
-    }
+        .input-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
 
-    input[type="text"] {
-        flex: 1;
-        padding: 12px 16px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 8px;
-        background: rgba(0, 0, 0, 0.3);
-        color: #fff;
-        font-size: 14px;
-        font-family: 'Monaco', 'Menlo', monospace;
-        outline: none;
-        transition: border-color 0.3s;
-    }
+        input[type="text"] {
+            flex: 1;
+            padding: 12px 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            background: rgba(0, 0, 0, 0.3);
+            color: #fff;
+            font-size: 14px;
+            font-family: 'Monaco', 'Menlo', monospace;
+            outline: none;
+            transition: border-color 0.3s;
+        }
 
-    input[type="text"]:focus {
-        border-color: #64ffda;
-    }
+        input[type="text"]:focus {
+            border-color: #64ffda;
+        }
 
-    input[type="text"]::placeholder {
-        color: #5a6a8a;
-    }
+        input[type="text"]::placeholder {
+            color: #5a6a8a;
+        }
 
-    button {
-        padding: 12px 24px;
-        border: none;
-        border-radius: 8px;
-        font-size: 14px;
-        font-weight: 500;
-        cursor: pointer;
-        transition: all 0.3s;
-    }
+        button {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
 
-    .btn-primary {
-        background: #64ffda;
-        color: #1a1a2e;
-    }
+        .btn-primary {
+            background: #64ffda;
+            color: #1a1a2e;
+        }
 
-    .btn-primary:hover {
-        background: #4cd9b8;
-        transform: translateY(-1px);
-    }
+        .btn-primary:hover {
+            background: #4cd9b8;
+            transform: translateY(-1px);
+        }
 
-    .btn-secondary {
-        background: rgba(100, 255, 218, 0.1);
-        color: #64ffda;
-        border: 1px solid #64ffda;
-    }
+        .btn-secondary {
+            background: rgba(100, 255, 218, 0.1);
+            color: #64ffda;
+            border: 1px solid #64ffda;
+        }
 
-    .btn-secondary:hover {
-        background: rgba(100, 255, 218, 0.2);
-    }
+        .btn-secondary:hover {
+            background: rgba(100, 255, 218, 0.2);
+        }
 
-    .btn-copy {
-        padding: 12px;
-        min-width: 44px;
-    }
+        .btn-copy {
+            padding: 12px;
+            min-width: 44px;
+        }
 
-    .divider {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-        margin: 20px 0;
-        color: #5a6a8a;
-        font-size: 12px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
+        .divider {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin: 20px 0;
+            color: #5a6a8a;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
 
-    .divider::before,
-    .divider::after {
-        content: '';
-        flex: 1;
-        height: 1px;
-        background: rgba(255, 255, 255, 0.1);
-    }
+        .divider::before,
+        .divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.1);
+        }
 
-    .editor-container {
-        width: 100%;
-        max-width: 600px;
-    }
+        .editor-container {
+            width: 100%;
+            max-width: 600px;
+        }
 
-    .editor-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 12px;
-    }
+        .editor-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
 
-    .editor-actions {
-        display: flex;
-        gap: 8px;
-    }
+        .editor-actions {
+            display: flex;
+            gap: 8px;
+        }
 
-    .btn-icon {
-        padding: 8px 12px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 6px;
-        background: rgba(0, 0, 0, 0.3);
-        color: #8892b0;
-        font-size: 12px;
-        cursor: pointer;
-        transition: all 0.3s;
-    }
+        .btn-icon {
+            padding: 8px 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            background: rgba(0, 0, 0, 0.3);
+            color: #8892b0;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
 
-    .btn-icon:hover {
-        background: rgba(100, 255, 218, 0.1);
-        border-color: #64ffda;
-        color: #64ffda;
-    }
+        .btn-icon:hover {
+            background: rgba(100, 255, 218, 0.1);
+            border-color: #64ffda;
+            color: #64ffda;
+        }
 
-    .editor-label {
-        font-size: 14px;
-        color: #8892b0;
-    }
+        .editor-label {
+            font-size: 14px;
+            color: #8892b0;
+        }
 
-    .sync-indicator {
-        font-size: 12px;
-        color: #64ffda;
-        opacity: 0;
-        transition: opacity 0.3s;
-    }
+        .sync-indicator {
+            font-size: 12px;
+            color: #64ffda;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
 
-    .sync-indicator.active {
-        opacity: 1;
-    }
+        .sync-indicator.active {
+            opacity: 1;
+        }
 
-    textarea {
-        width: 100%;
-        height: 400px;
-        padding: 20px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 12px;
-        background: rgba(0, 0, 0, 0.3);
-        color: #e6f1ff;
-        font-size: 16px;
-        font-family: 'Monaco', 'Menlo', 'Consolas', monospace;
-        line-height: 1.6;
-        resize: vertical;
-        outline: none;
-        transition: border-color 0.3s, box-shadow 0.3s;
-    }
+        textarea {
+            width: 100%;
+            height: 400px;
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            background: rgba(0, 0, 0, 0.3);
+            color: #e6f1ff;
+            font-size: 16px;
+            font-family: 'Monaco', 'Menlo', 'Consolas', monospace;
+            line-height: 1.6;
+            resize: vertical;
+            outline: none;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
 
-    textarea:focus {
-        border-color: #64ffda;
-        box-shadow: 0 0 20px rgba(100, 255, 218, 0.1);
-    }
+        textarea:focus {
+            border-color: #64ffda;
+            box-shadow: 0 0 20px rgba(100, 255, 218, 0.1);
+        }
 
-    textarea::placeholder {
-        color: #5a6a8a;
-    }
+        textarea::placeholder {
+            color: #5a6a8a;
+        }
 
-    .instructions {
-        margin-top: 30px;
-        padding: 20px;
-        background: rgba(100, 255, 218, 0.05);
-        border: 1px solid rgba(100, 255, 218, 0.2);
-        border-radius: 12px;
-        max-width: 600px;
-        width: 100%;
-    }
+        .instructions {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(100, 255, 218, 0.05);
+            border: 1px solid rgba(100, 255, 218, 0.2);
+            border-radius: 12px;
+            max-width: 600px;
+            width: 100%;
+        }
 
-    .instructions h3 {
-        font-size: 14px;
-        color: #64ffda;
-        margin-bottom: 12px;
-    }
+        .instructions h3 {
+            font-size: 14px;
+            color: #64ffda;
+            margin-bottom: 12px;
+        }
 
-    .instructions ol {
-        padding-left: 20px;
-        color: #8892b0;
-        font-size: 14px;
-        line-height: 1.8;
-    }
+        .instructions ol {
+            padding-left: 20px;
+            color: #8892b0;
+            font-size: 14px;
+            line-height: 1.8;
+        }
 
-    .toast {
-        position: fixed;
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%) translateY(100px);
-        background: #64ffda;
-        color: #1a1a2e;
-        padding: 12px 24px;
-        border-radius: 8px;
-        font-size: 14px;
-        font-weight: 500;
-        opacity: 0;
-        transition: all 0.3s;
-    }
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: #64ffda;
+            color: #1a1a2e;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            opacity: 0;
+            transition: all 0.3s;
+        }
 
-    .toast.show {
-        transform: translateX(-50%) translateY(0);
-        opacity: 1;
-    }
-</style>
-```
-
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+    </style>
 </head>
 <body>
     <h1>SYNC EDITOR</h1>
     <p class="subtitle">Real-time collaborative text editing via WebRTC</p>
 
-```
-<div class="connection-panel">
-    <h2>Connection</h2>
-    <div class="status">
-        <div class="status-dot" id="statusDot"></div>
-        <span class="status-text" id="statusText">Not connected</span>
-    </div>
-
-    <div class="input-group">
-        <input type="text" id="myId" readonly placeholder="Your ID will appear here...">
-        <button class="btn-secondary btn-copy" onclick="copyId()" title="Copy ID">📋</button>
-    </div>
-
-    <div class="divider">or connect to peer</div>
-
-    <div class="input-group">
-        <input type="text" id="peerId" placeholder="Enter peer ID to connect...">
-        <button class="btn-primary" onclick="connectToPeer()">Connect</button>
-    </div>
-</div>
-
-<div class="editor-container">
-    <div class="editor-header">
-        <span class="editor-label">Shared Document</span>
-        <div class="editor-actions">
-            <button class="btn-icon" onclick="pasteContent()" title="Paste from clipboard">📋 Paste</button>
-            <button class="btn-icon" onclick="copyContent()" title="Copy all content">📄 Copy</button>
+    <div class="connection-panel">
+        <h2>Connection</h2>
+        <div class="status">
+            <div class="status-dot" id="statusDot"></div>
+            <span class="status-text" id="statusText">Not connected</span>
         </div>
-        <span class="sync-indicator" id="syncIndicator">● Syncing...</span>
+
+        <div class="input-group">
+            <input type="text" id="myId" readonly placeholder="Your ID will appear here...">
+            <button class="btn-secondary btn-copy" onclick="copyId()" title="Copy ID">📋</button>
+        </div>
+
+        <div class="divider">or connect to peer</div>
+
+        <div class="input-group">
+            <input type="text" id="peerId" placeholder="Enter peer ID to connect...">
+            <button class="btn-primary" onclick="connectToPeer()">Connect</button>
+        </div>
     </div>
-    <textarea 
-        id="editor" 
-        placeholder="Start typing... Text will sync instantly with connected peer."
-    ></textarea>
-</div>
 
-<div class="instructions">
-    <h3>How to connect</h3>
-    <ol>
-        <li>Open this page in two browser windows (or on two devices)</li>
-        <li>Copy the ID from one window</li>
-        <li>Paste it into the "Enter peer ID" field in the other window</li>
-        <li>Click Connect — you're now synced!</li>
-    </ol>
-</div>
+    <div class="editor-container">
+        <div class="editor-header">
+            <span class="editor-label">Shared Document</span>
+            <div class="editor-actions">
+                <button class="btn-icon" onclick="pasteContent()" title="Paste from clipboard">📋 Paste</button>
+                <button class="btn-icon" onclick="copyContent()" title="Copy all content">📄 Copy</button>
+            </div>
+            <span class="sync-indicator" id="syncIndicator">● Syncing...</span>
+        </div>
+        <textarea 
+            id="editor" 
+            placeholder="Start typing... Text will sync instantly with connected peer."
+        ></textarea>
+    </div>
 
-<div class="toast" id="toast">Copied to clipboard!</div>
+    <div class="instructions">
+        <h3>How to connect</h3>
+        <ol>
+            <li>Open this page in two browser windows (or on two devices)</li>
+            <li>Copy the ID from one window</li>
+            <li>Paste it into the "Enter peer ID" field in the other window</li>
+            <li>Click Connect — you're now synced!</li>
+        </ol>
+    </div>
 
-<script src="https://unpkg.com/peerjs@1.5.2/dist/peerjs.min.js"></script>
-<script>
-    let peer;
-    let conn;
-    let isRemoteUpdate = false;
+    <div class="toast" id="toast">Copied to clipboard!</div>
 
-    const editor = document.getElementById('editor');
-    const myIdInput = document.getElementById('myId');
-    const peerIdInput = document.getElementById('peerId');
-    const statusDot = document.getElementById('statusDot');
-    const statusText = document.getElementById('statusText');
-    const syncIndicator = document.getElementById('syncIndicator');
-    const toast = document.getElementById('toast');
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/peerjs/1.5.2/peerjs.min.js"></script>
+    <script>
+        let peer;
+        let conn;
+        let isRemoteUpdate = false;
 
-    // Initialize PeerJS with a random ID
-    function initPeer() {
-        const randomId = 'sync-' + Math.random().toString(36).substr(2, 9);
-        
-        peer = new Peer(randomId, {
-            debug: 1
-        });
+        const editor = document.getElementById('editor');
+        const myIdInput = document.getElementById('myId');
+        const peerIdInput = document.getElementById('peerId');
+        const statusDot = document.getElementById('statusDot');
+        const statusText = document.getElementById('statusText');
+        const syncIndicator = document.getElementById('syncIndicator');
+        const toast = document.getElementById('toast');
 
-        peer.on('open', (id) => {
-            myIdInput.value = id;
-            console.log('My peer ID is:', id);
-        });
+        // Initialize PeerJS with a random ID
+        function initPeer() {
+            if (typeof Peer === 'undefined') {
+                statusText.textContent = 'Loading PeerJS...';
+                setTimeout(initPeer, 500);
+                return;
+            }
 
-        peer.on('connection', (connection) => {
-            conn = connection;
+            const randomId = 'sync-' + Math.random().toString(36).substr(2, 9);
+            
+            peer = new Peer(randomId, {
+                debug: 1
+            });
+
+            peer.on('open', (id) => {
+                myIdInput.value = id;
+                console.log('My peer ID is:', id);
+            });
+
+            peer.on('connection', (connection) => {
+                conn = connection;
+                setupConnection();
+            });
+
+            peer.on('error', (err) => {
+                console.error('Peer error:', err);
+                if (err.type === 'peer-unavailable') {
+                    showToast('Peer not found. Check the ID and try again.');
+                }
+            });
+        }
+
+        // Connect to a remote peer
+        function connectToPeer() {
+            const remotePeerId = peerIdInput.value.trim();
+            if (!remotePeerId) {
+                showToast('Please enter a peer ID');
+                return;
+            }
+
+            conn = peer.connect(remotePeerId, {
+                reliable: true
+            });
+
             setupConnection();
-        });
-
-        peer.on('error', (err) => {
-            console.error('Peer error:', err);
-            if (err.type === 'peer-unavailable') {
-                showToast('Peer not found. Check the ID and try again.');
-            }
-        });
-    }
-
-    // Connect to a remote peer
-    function connectToPeer() {
-        const remotePeerId = peerIdInput.value.trim();
-        if (!remotePeerId) {
-            showToast('Please enter a peer ID');
-            return;
         }
 
-        conn = peer.connect(remotePeerId, {
-            reliable: true
-        });
-
-        setupConnection();
-    }
-
-    // Setup connection handlers
-    function setupConnection() {
-        conn.on('open', () => {
-            setConnected(true);
-            // Send current content when connection opens
-            conn.send({
-                type: 'sync',
-                content: editor.value
+        // Setup connection handlers
+        function setupConnection() {
+            conn.on('open', () => {
+                setConnected(true);
+                // Send current content when connection opens
+                conn.send({
+                    type: 'sync',
+                    content: editor.value
+                });
             });
-        });
 
-        conn.on('data', (data) => {
-            if (data.type === 'sync' || data.type === 'update') {
-                isRemoteUpdate = true;
-                
-                // Preserve cursor position
-                const cursorPos = editor.selectionStart;
-                const oldLength = editor.value.length;
-                
-                editor.value = data.content;
-                
-                // Adjust cursor position based on content change
-                const newLength = editor.value.length;
-                const diff = newLength - oldLength;
-                const newCursorPos = Math.max(0, Math.min(cursorPos + diff, newLength));
-                
-                editor.setSelectionRange(newCursorPos, newCursorPos);
-                
-                showSyncIndicator();
-                isRemoteUpdate = false;
-            }
-        });
-
-        conn.on('close', () => {
-            setConnected(false);
-        });
-
-        conn.on('error', (err) => {
-            console.error('Connection error:', err);
-            setConnected(false);
-        });
-    }
-
-    // Handle local text changes
-    editor.addEventListener('input', () => {
-        if (isRemoteUpdate) return;
-        
-        if (conn && conn.open) {
-            conn.send({
-                type: 'update',
-                content: editor.value
+            conn.on('data', (data) => {
+                if (data.type === 'sync' || data.type === 'update') {
+                    isRemoteUpdate = true;
+                    
+                    // Preserve cursor position
+                    const cursorPos = editor.selectionStart;
+                    const oldLength = editor.value.length;
+                    
+                    editor.value = data.content;
+                    
+                    // Adjust cursor position based on content change
+                    const newLength = editor.value.length;
+                    const diff = newLength - oldLength;
+                    const newCursorPos = Math.max(0, Math.min(cursorPos + diff, newLength));
+                    
+                    editor.setSelectionRange(newCursorPos, newCursorPos);
+                    
+                    showSyncIndicator();
+                    isRemoteUpdate = false;
+                }
             });
-            showSyncIndicator();
+
+            conn.on('close', () => {
+                setConnected(false);
+            });
+
+            conn.on('error', (err) => {
+                console.error('Connection error:', err);
+                setConnected(false);
+            });
         }
-    });
 
-    // Update connection status UI
-    function setConnected(connected) {
-        if (connected) {
-            statusDot.classList.add('connected');
-            statusText.textContent = 'Connected to peer';
-        } else {
-            statusDot.classList.remove('connected');
-            statusText.textContent = 'Disconnected';
-        }
-    }
-
-    // Show sync indicator briefly
-    function showSyncIndicator() {
-        syncIndicator.classList.add('active');
-        setTimeout(() => {
-            syncIndicator.classList.remove('active');
-        }, 500);
-    }
-
-    // Copy ID to clipboard
-    function copyId() {
-        const id = myIdInput.value;
-        if (!id) return;
-        
-        navigator.clipboard.writeText(id).then(() => {
-            showToast('Copied to clipboard!');
-        }).catch(() => {
-            // Fallback for older browsers
-            myIdInput.select();
-            document.execCommand('copy');
-            showToast('Copied to clipboard!');
-        });
-    }
-
-    // Copy editor content to clipboard
-    function copyContent() {
-        const content = editor.value;
-        if (!content) {
-            showToast('Nothing to copy');
-            return;
-        }
-        
-        navigator.clipboard.writeText(content).then(() => {
-            showToast('Content copied!');
-        }).catch(() => {
-            editor.select();
-            document.execCommand('copy');
-            showToast('Content copied!');
-        });
-    }
-
-    // Paste from clipboard into editor
-    function pasteContent() {
-        navigator.clipboard.readText().then((text) => {
-            const cursorPos = editor.selectionStart;
-            const before = editor.value.substring(0, cursorPos);
-            const after = editor.value.substring(editor.selectionEnd);
+        // Handle local text changes
+        editor.addEventListener('input', () => {
+            if (isRemoteUpdate) return;
             
-            editor.value = before + text + after;
-            editor.focus();
-            
-            // Set cursor after pasted content
-            const newPos = cursorPos + text.length;
-            editor.setSelectionRange(newPos, newPos);
-            
-            // Sync with peer
             if (conn && conn.open) {
                 conn.send({
                     type: 'update',
@@ -516,26 +442,99 @@
                 });
                 showSyncIndicator();
             }
-            
-            showToast('Content pasted!');
-        }).catch(() => {
-            showToast('Unable to paste. Check clipboard permissions.');
         });
-    }
 
-    // Show toast notification
-    function showToast(message) {
-        toast.textContent = message;
-        toast.classList.add('show');
-        setTimeout(() => {
-            toast.classList.remove('show');
-        }, 2000);
-    }
+        // Update connection status UI
+        function setConnected(connected) {
+            if (connected) {
+                statusDot.classList.add('connected');
+                statusText.textContent = 'Connected to peer';
+            } else {
+                statusDot.classList.remove('connected');
+                statusText.textContent = 'Disconnected';
+            }
+        }
 
-    // Initialize on page load
-    initPeer();
-</script>
-```
+        // Show sync indicator briefly
+        function showSyncIndicator() {
+            syncIndicator.classList.add('active');
+            setTimeout(() => {
+                syncIndicator.classList.remove('active');
+            }, 500);
+        }
 
+        // Copy ID to clipboard
+        function copyId() {
+            const id = myIdInput.value;
+            if (!id) return;
+            
+            navigator.clipboard.writeText(id).then(() => {
+                showToast('Copied to clipboard!');
+            }).catch(() => {
+                // Fallback for older browsers
+                myIdInput.select();
+                document.execCommand('copy');
+                showToast('Copied to clipboard!');
+            });
+        }
+
+        // Copy editor content to clipboard
+        function copyContent() {
+            const content = editor.value;
+            if (!content) {
+                showToast('Nothing to copy');
+                return;
+            }
+            
+            navigator.clipboard.writeText(content).then(() => {
+                showToast('Content copied!');
+            }).catch(() => {
+                editor.select();
+                document.execCommand('copy');
+                showToast('Content copied!');
+            });
+        }
+
+        // Paste from clipboard into editor
+        function pasteContent() {
+            navigator.clipboard.readText().then((text) => {
+                const cursorPos = editor.selectionStart;
+                const before = editor.value.substring(0, cursorPos);
+                const after = editor.value.substring(editor.selectionEnd);
+                
+                editor.value = before + text + after;
+                editor.focus();
+                
+                // Set cursor after pasted content
+                const newPos = cursorPos + text.length;
+                editor.setSelectionRange(newPos, newPos);
+                
+                // Sync with peer
+                if (conn && conn.open) {
+                    conn.send({
+                        type: 'update',
+                        content: editor.value
+                    });
+                    showSyncIndicator();
+                }
+                
+                showToast('Content pasted!');
+            }).catch(() => {
+                showToast('Unable to paste. Check clipboard permissions.');
+            });
+        }
+
+        // Show toast notification
+        function showToast(message) {
+            toast.textContent = message;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 2000);
+        }
+
+        // Initialize on page load
+        initPeer();
+    </script>
 </body>
 </html>
